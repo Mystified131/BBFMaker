@@ -68,8 +68,6 @@ ctr = 25
 
 playlst = []
 
-pltext = []
-
 plytext = []
 
 for x in range(1, (ctr + 1)):
@@ -81,20 +79,10 @@ for x in range(1, (ctr + 1)):
     #outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack' + str(x) + '.mp3'
     outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack_' + str(x) + '_' + outr
     shutil.copy(elem, outstr)
-    pltext.append(outr)
     plytext.append(outstr)
 
 print("")
-print(playlst)
-
-oustr = "BFF_Track_List_" + tim + ".txt"
-
-outfile = open(oustr, "w")
-
-for elem in pltext:
-    outfile.write(elem + '\n')
-
-outfile.close()       
+print(playlst)     
 
 oustr = "BFF_Playlist_" + tim + ".m3u"
 
