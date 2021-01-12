@@ -50,7 +50,9 @@ for x in range(6):
 
 filst = []
 
-limlen = sizdict[contents[0]]
+#limlen = sizdict[contents[0]]
+
+limlen = 1200
 
 pl1 = []
 
@@ -139,12 +141,30 @@ infile.close()
 spl = []
 
 for x in range(limlen):
-    spl.append(pl1[x])
-    spl.append(pl2[x])
-    spl.append(pl3[x])
-    spl.append(pl4[x])
-    spl.append(pl5[x])
-    spl.append(pl6[x])
+    try:
+        spl.append(pl1[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl2[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl3[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl4[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl5[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl6[x])
+    except:
+        print("Overflow.")
     
 oustr = "Shuffled_Playlist.txt"
 
