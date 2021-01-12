@@ -20,7 +20,7 @@ oustr = "Zimmer.m3u"
 
 outfile = open("temp.txt", "w")
 
-for elem in spl:
+for elem in playlist:
     outfile.write(elem + '\n')
 
 outfile.close()   
