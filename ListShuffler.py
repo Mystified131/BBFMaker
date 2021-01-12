@@ -49,13 +49,7 @@ for x in range(5):
 
 filst = []
 
-filst = sorted(sizdict, key=sizdict.get, reverse=False)
-
-print(sizdict)
-
-print(filst)
-
-limlen = sizdict[contents[4]]
+limlen = sizdict[contents[0]]
 
 print(limlen)
 
