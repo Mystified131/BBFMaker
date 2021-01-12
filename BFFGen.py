@@ -46,9 +46,9 @@ leng = len(content)
 
 for y in range(50):
  
-    trk = random.randrange(leng - 12)
+    trk = random.randrange(leng - 30)
 
-    skip = random.randrange(1, 12)
+    skip = random.randrange(1, 30)
 
     adnum = trk + skip
 
@@ -87,7 +87,7 @@ for x in range(1, (ctr + 1)):
 print("")
 print(playlst)
 
-oustr = "BFF_Sample_Track_List_" + tim + ".txt"
+oustr = "BFF_Track_List_" + tim + ".txt"
 
 outfile = open(oustr, "w")
 
@@ -96,7 +96,7 @@ for elem in pltext:
 
 outfile.close()       
 
-oustr = "BFF_Sample_Playlist_" + tim + ".m3u"
+oustr = "BFF_Playlist_" + tim + ".m3u"
 
 outfile = open(oustr, "w")
 
