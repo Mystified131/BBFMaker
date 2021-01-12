@@ -4,6 +4,7 @@ import random
 import os
 from collections import defaultdict
 import datetime
+from subprocess import call
 
 #this code retrieves the date and time from the computer, to create the timestamp
 
@@ -148,6 +149,14 @@ with open("temp.txt") as f:
             outfile.write(line)
 
 outfile.close()
+
+print("")
+
+prompt = input("Press any key to generate the playlist.")
+
+print("")
+
+call(["python", "BFFGen.py"])
 
 ## THE GHOST OF THE SHADOW ##
 
