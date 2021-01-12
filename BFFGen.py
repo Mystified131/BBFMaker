@@ -70,6 +70,8 @@ playlst = []
 
 pltext = []
 
+plytext = []
+
 for x in range(1, (ctr + 1)):
     print("")
     print("Copying")
@@ -80,11 +82,12 @@ for x in range(1, (ctr + 1)):
     outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack_' + str(x) + '_' + outr
     shutil.copy(elem, outstr)
     pltext.append(outr)
+    plytext.append(outstr)
 
 print("")
 print(playlst)
 
-oustr = "BFF_Sample_Playlist_" + tim + ".txt"
+oustr = "BFF_Sample_Track_List_" + tim + ".txt"
 
 outfile = open(oustr, "w")
 
@@ -92,5 +95,14 @@ for elem in pltext:
     outfile.write(elem + '\n')
 
 outfile.close()       
+
+oustr = "BFF_Sample_Playlist_" + tim + ".txt"
+
+outfile = open(oustr, "w")
+
+for elem in plytext:
+    outfile.write(elem + '\n')
+
+outfile.close()     
 
 ## THE GHOST OF THE SHADOW ##
