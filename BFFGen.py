@@ -58,7 +58,9 @@ for y in range(50):
 
     adstr = content[adnum]
 
-    finlst.append(adstr)
+    if adstr not in finlst:
+
+        finlst.append(adstr)
 
 #ctr = len(finlst)
 
