@@ -66,13 +66,18 @@ ctr = 25
 
 playlst = []
 
-for x in range(ctr):
+pltext = []
+
+for x in range(1, (ctr + 1)):
     print("")
     print("Copying")
     elem = finlst[x]
     playlst.append(elem)
-    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack' + str(x) + '.mp3'
+    outr = os.path.basename(elem)
+    #outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack' + str(x) + '.mp3'
+    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack_' + str(x) + '_' + outr
     shutil.copy(elem, outstr)
+    pltext.append(outr)
 
 print("")
 print(playlst)
@@ -81,7 +86,7 @@ oustr = "BFF_Sample_Playlist_" + tim + ".txt"
 
 outfile = open(oustr, "w")
 
-for elem in playlst:
+for elem in pltext:
     outfile.write(elem + '\n')
 
 outfile.close()       
