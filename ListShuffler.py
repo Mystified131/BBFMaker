@@ -19,7 +19,7 @@ tim = ("".join(list))
 
 contents = []
 
-srchstr = 'C:\\Users\\mysti\\Coding\\BatchDownloader\\'
+srchstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\'
 
 for subdir, dirs, files in os.walk(srchstr):
     for file in files:
@@ -29,63 +29,110 @@ for subdir, dirs, files in os.walk(srchstr):
 
             contents.append(filepath)
 
-pl1 = []
-pl2 = []
-pl3 = []
-pl4 = []
-pl5 = []
-
+sizdict = {}
 
 for elem in contents:
+    sizdict[elem] = len(elem)
 
-    infile = open(elem, "r")
+filst = []
 
+filst = sorted(sizdict, key=sizdict.get, reverse=False)
+
+print(sizdict)
+
+print(filst)
+
+limlen = sizdict[contents[4]]
+
+print(limlen)
+
+pl1 = []
+
+elem = contents[0]
+
+infile = open(elem, "r")
+
+plist = infile.readline()
+
+while plist:
+    pl1.append(plist.strip())
     plist = infile.readline()
 
-    while plist:
-        pl1.append(plist.strip())
-        plist = infile.readline()
-        pl2.append(plist.strip())
-        plist = infile.readline()
-        pl3.append(plist.strip())
-        plist = infile.readline()
-        pl4.append(plist.strip())
-        plist = infile.readline()
-        pl5.append(plist.strip())
-        plist = infile.readline()
+infile.close()
 
-    infile.close()
+pl2 = []
 
-finpl = []
+elem = contents[1]
 
-for elem in pl1:
-    if elem not in finpl:
-        finpl.append(elem)
+infile = open(elem, "r")
 
-for elem2 in pl2:
-    if elem2 not in finpl:
-        finpl.append(elem2)
+plist = infile.readline()
 
-for elem3 in pl3:
-    if elem3 not in finpl:
-        finpl.append(elem3)
+while plist:
+    pl2.append(plist.strip())
+    plist = infile.readline()
 
-for elem4 in pl4:
-    if elem4 not in finpl:
-        finpl.append(elem4)
+infile.close()
 
-for elem5 in pl5:
-    if elem5 not in finpl:
-        finpl.append(elem5)
+pl3 = []
+
+elem = contents[2]
+
+infile = open(elem, "r")
+
+plist = infile.readline()
+
+while plist:
+    pl3.append(plist.strip())
+    plist = infile.readline()
+
+infile.close()
+
+pl4 = []
+
+elem = contents[3]
+
+infile = open(elem, "r")
+
+plist = infile.readline()
+
+while plist:
+    pl4.append(plist.strip())
+    plist = infile.readline()
+
+infile.close()
+
+pl5 = []
+
+elem = contents[4]
+
+infile = open(elem, "r")
+
+plist = infile.readline()
+
+while plist:
+    pl5.append(plist.strip())
+    plist = infile.readline()
+
+infile.close()
+
+spl = []
+
+for x in range(limlen):
+    spl.append(pl1[x])
+    spl.append(pl2[x])
+    spl.append(pl3[x])
+    spl.append(pl4[x])
+    spl.append(pl5[x])
 
 oustr = "Shuffled_Playlist.txt"
 
 outfile = open("temp.txt", "w")
 
-for elem in finpl:
+for elem in spl:
     outfile.write(elem + '\n')
 
-outfile.close()       
+outfile.close()   
 
 outfile = open(oustr, "w")
 
