@@ -96,7 +96,7 @@ for elem in pltext:
 
 outfile.close()       
 
-oustr = "BFF_Sample_Playlist_" + tim + ".txt"
+oustr = "BFF_Sample_Playlist_" + tim + ".m3u"
 
 outfile = open(oustr, "w")
 
