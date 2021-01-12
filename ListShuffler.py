@@ -51,8 +51,6 @@ filst = []
 
 limlen = sizdict[contents[0]]
 
-print(limlen)
-
 pl1 = []
 
 elem = contents[0]
