@@ -31,8 +31,21 @@ for subdir, dirs, files in os.walk(srchstr):
 
 sizdict = {}
 
-for elem in contents:
-    sizdict[elem] = len(elem)
+for x in range(5):
+
+    pl = []
+
+    infile = open(contents[x], "r")
+
+    plist = infile.readline()
+
+    while plist:
+        pl.append(plist.strip())
+        plist = infile.readline()
+
+    infile.close()
+
+    sizdict[contents[x]] = len(pl)
 
 filst = []
 
