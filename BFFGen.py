@@ -26,7 +26,7 @@ tim = ("".join(list))
 
 #srchstr = "C:\\Users\\mysti\\Media_Files\\Sounds\\OlderSounds"
 
-srchstr = "TT.txt"
+srchstr = "Shuffled_Playlist.txt"
 
 content = []
 
