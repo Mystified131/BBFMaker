@@ -32,7 +32,7 @@ for subdir, dirs, files in os.walk(srchstr):
 
 sizdict = {}
 
-for x in range(6):
+for x in range(7):
 
     pl = []
 
@@ -138,6 +138,20 @@ while plist:
 
 infile.close()
 
+pl7 = []
+
+elem = contents[6]
+
+infile = open(elem, "r")
+
+plist = infile.readline()
+
+while plist:
+    pl7.append(plist.strip())
+    plist = infile.readline()
+
+infile.close()
+
 spl = []
 
 for x in range(limlen):
@@ -163,6 +177,10 @@ for x in range(limlen):
         print("Overflow.")
     try:
         spl.append(pl6[x])
+    except:
+        print("Overflow.")
+    try:
+        spl.append(pl7[x])
     except:
         print("Overflow.")
     
