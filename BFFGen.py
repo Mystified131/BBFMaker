@@ -77,7 +77,7 @@ for x in range(1, (ctr + 1)):
     playlst.append(elem)
     outr = os.path.basename(elem)
     #outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack' + str(x) + '.mp3'
-    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack_' + str(x) + '_' + outr
+    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\Audio\\radiotrack_' + str(x) + '_' + outr
     shutil.copy(elem, outstr)
     plytext.append(outstr)
 
