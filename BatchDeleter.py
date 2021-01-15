@@ -5,7 +5,7 @@ import re
 import collections
 import operator
  
-for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\BFFMaker'):
+for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\BFFMaker\\Audio'):
     for file in files:
         filepath = subdir + os.sep + file
 
