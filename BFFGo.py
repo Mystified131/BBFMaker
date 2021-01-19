@@ -30,23 +30,23 @@ for subdir, dirs, files in os.walk(srchstr):
 
             contents.append(filepath)
 
-sizdict = {}
+#sizdict = {}
 
-for x in range(7):
+#for x in range(7):
 
-    pl = []
+    #pl = []
 
-    infile = open(contents[x], "r")
+    #infile = open(contents[x], "r")
 
-    plist = infile.readline()
+    #plist = infile.readline()
 
-    while plist:
-        pl.append(plist.strip())
-        plist = infile.readline()
+    #while plist:
+        #pl.append(plist.strip())
+        #plist = infile.readline()
 
-    infile.close()
+    #infile.close()
 
-    sizdict[contents[x]] = len(pl)
+    #sizdict[contents[x]] = len(pl)
 
 filst = []
 
