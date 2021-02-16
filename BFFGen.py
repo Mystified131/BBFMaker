@@ -5,6 +5,7 @@ import os
 from collections import defaultdict
 import datetime
 import shutil
+from pathlib import Path
 
 #this code retrieves the date and time from the computer, to create the timestamp
 
@@ -74,11 +75,14 @@ for x in range(1, (ctr + 1)):
     print("")
     print("Copying")
     elem = finlst[x]
-    playlst.append(elem)
+    trk =  str(Path(finlst[x]).stem)
+    p = (Path(finlst[x]))
+    trkloc = str(p.parts[-2])
     outr = os.path.basename(elem)
-    #outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\radiotrack' + str(x) + '.mp3'
-    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\Audio\\radiotrack_' + str(x) + '_' + outr
+    outstr = 'C:\\Users\\mysti\\Coding\\BFFMaker\\Audio\\' + str(x) + "_" + str(tim) + "_" + trkloc + "-__" + outr
+    outstrb = str(x) + "_" + trkloc + ": " + outr
     shutil.copy(elem, outstr)
+    playlst.append(outstrb)
     plytext.append(outstr)
 
 print("")
@@ -92,5 +96,14 @@ for elem in plytext:
     outfile.write(elem + '\n')
 
 outfile.close()     
+
+oustr2 = "BFF_Tracklist_" + tim + ".txt"
+
+outfile = open(oustr2, "w")
+
+for elem in playlst:
+    outfile.write(elem + '\n')
+
+outfile.close()  
 
 ## THE GHOST OF THE SHADOW ##
