@@ -26,7 +26,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if  filepath.endswith(".m3u"):
+        if  filepath.endswith(".m3u") and 'BFF' not in filepath:
 
             contents.append(filepath)
 
