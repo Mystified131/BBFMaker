@@ -9,7 +9,7 @@ for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\BFFMaker\\Audio'):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if (filepath.endswith(".mp3")) or (filepath.endswith(".sfk")):
+        if (filepath.endswith(".mp3")) or (filepath.endswith(".sfk")) or (('8000' in filepath) and ('Audio' in filepath)):
             os. remove(filepath) 
 
 print("")
